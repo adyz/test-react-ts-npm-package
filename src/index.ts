@@ -1,4 +1,3 @@
+console.log('dadadaddddd');
 const sayHello = (name: string) => `Hello ${name}`;
-console.log(sayHello('World'));
-
 export default sayHello;

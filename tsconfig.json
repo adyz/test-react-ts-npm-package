@@ -1,19 +1,7 @@
 {
     "compilerOptions": {
-        "outDir": "./dist/",
-        "sourceMap": true,
-        "noImplicitAny": true,
-        "module": "commonjs",
         "target": "es5",
-        "lib": ["es2015", "dom"],
-        "jsx": "react",
-        "allowJs": true
-    },
-    "include": [
-        "./src/**/*",
-        "./types/index.d.ts"
-    ],
-    "exclude": [
-        "./src/**/*.test.tsx"
-    ]
+        "module": "commonjs",
+        "declaration": false
+    }
 }

@@ -5,7 +5,8 @@ module.exports = {
   entry: './src/index.ts',
   mode: env,
   output: {
-    filename: 'bundle.js', //This will be under the dist folder?
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, './dist')
   },
   module: {
     rules: [

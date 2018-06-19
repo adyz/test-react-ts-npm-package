@@ -1,11 +1,12 @@
 {
   "name": "test-react-ts-npm-package",
-  "version": "1.0.3",
-  "main": "dist/bundle",
+  "version": "1.0.4",
+  "main": "dist/bundle.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm ./dist/* && webpack",
-    "pre": "rm ./dist/* && webpack && npm version patch"
+    "build": "(rm ./dist/* || true) && webpack",
+    "pre": "(rm ./dist/* || true) && webpack && npm version patch"
   },
   "repository": {
     "type": "git",
