@@ -1,0 +1,24 @@
+{
+  "name": "test-react-ts-npm-package",
+  "version": "1.0.0",
+  "main": "dist/index",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm ./dist/* && webpack",
+    "pre": "rm ./dist/* && webpack && npm version patch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adyz/test-react-ts-npm-package"
+  },
+  "devDependencies": {
+    "ts-loader": "^4.4.1",
+    "typescript": "^2.9.2",
+    "webpack": "^4.12.0",
+    "webpack-cli": "^3.0.8"
+  },
+  "peerDependencies": {
+    "react": "^15.3.2 || ^16.1.0",
+    "react-dom": "^15.3.2 || ^16.1.0"
+  },
+}
