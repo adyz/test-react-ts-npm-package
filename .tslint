@@ -44,8 +44,7 @@
         "no-eval": true,
         "no-implicit-dependencies": [true, "dev"],
         "no-shadowed-variable": true,
-        "no-string-literal": true,
-        "no-submodule-imports": [true, "@ba-ui-toolkit/ba-graphics", "react-intl", "ibm-design-icons"],        
+        "no-string-literal": true,     
         "no-switch-case-fall-through": true,
         "no-trailing-whitespace": false,
         "no-unused-expression": true,
@@ -91,11 +90,6 @@
             "check-separator",
             "check-type",
             "check-typecast"
-        ]
-    },
-    "linterOptions": {
-        "exclude": [
-            "./src/app/mock-data/*.ts"
         ]
     }
 }

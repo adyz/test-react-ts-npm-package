@@ -3,13 +3,19 @@ import * as React from 'react';
 import './scss/style.scss'
 
 export interface BannerProps {
+    name: string;
 }
 
-export default class Banner extends React.Component<BannerProps, any> {
-  render() {
+export interface BannerState {
+    active?: false
+}
+
+export default class Banner extends React.Component<BannerProps, BannerState> {
+  public render() {
+    
     return (
       <div className="banner">
-          <h1>Da</h1>
+          <h1>Hello {this.props.name}</h1>
       </div>
     );
   }
