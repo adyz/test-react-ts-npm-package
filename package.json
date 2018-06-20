@@ -13,13 +13,19 @@
     "url": "https://github.com/adyz/test-react-ts-npm-package"
   },
   "devDependencies": {
+    "css-loader": "^0.28.11",
+    "node-sass": "^4.9.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
     "ts-loader": "^4.4.1",
     "typescript": "^2.9.2",
     "webpack": "^4.12.0",
     "webpack-cli": "^3.0.8"
   },
   "peerDependencies": {
-    "react": "^15.3.2 || ^16.1.0",
-    "react-dom": "^15.3.2 || ^16.1.0"
+    "react": "^15.3.2 || ^16.4.1",
+    "react-dom": "^15.3.2 || ^16.4.1"
   }
 }

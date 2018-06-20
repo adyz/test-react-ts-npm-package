@@ -1,2 +1,2 @@
-const sayHello = (name: string) => `Hello ${name}`;
-export default sayHello;
+import Banner from './Banner/Banner';
+export default Banner;
