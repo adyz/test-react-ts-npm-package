@@ -7,9 +7,7 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, './dist'),
-    libraryTarget: 'umd',
-    library: 'MyLib',
-    umdNamedDefine: true
+    libraryTarget: 'umd', //Universal Module Definition
   },
   module: {
     rules: [
