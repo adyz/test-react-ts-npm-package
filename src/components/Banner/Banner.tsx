@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import './scss/style.scss'
+import './_banner.scss'
 
 export interface BannerProps {
     name: string;

@@ -2,13 +2,19 @@ const path = require('path');
 const env = process.env.NODE_ENV ? process.env.NODE_ENV : 'development';
 
 module.exports = {
-  entry: './src/index.ts',
+  entry: {
+		index: "./src/index",
+	},
   mode: env,
   output: {
-    filename: 'bundle.js',
+    filename: '[name].js',
     path: path.resolve(__dirname, './dist'),
     libraryTarget: 'umd', //Universal Module Definition
   },
+  optimization: {
+    minimize: true
+  },
+  devtool: false,
   module: {
     rules: [
       {
@@ -23,6 +29,10 @@ module.exports = {
         ]
       }
     ]
+  },
+  externals: {
+      "react": "React",
+      "react-dom": "ReactDOM"
   },
   resolve: {
     extensions: [ '.tsx', '.ts', '.js' ]

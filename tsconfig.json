@@ -5,6 +5,7 @@
     "declaration": true,
     "outDir": "./",
     "jsx": "react",
+    "removeComments": true
   },
   "exclude": [
     "node_modules",

@@ -1,12 +1,17 @@
 {
   "name": "test-react-ts-npm-package",
   "version": "1.0.6",
-  "main": "dist/bundle.js",
+  "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "index.js",
+    "dist"
+  ],
   "scripts": {
+    "clean-dist": "(rm -rf ./dist || true)",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "(rm ./dist/* || true) && webpack",
-    "pre": "(rm ./dist/* || true) && webpack && npm version patch"
+    "build": "NODE_ENV=production npm run clean-dist && webpack",
+    "pre": "NODE_ENV=production npm run clean-dist && && webpack && npm version patch"
   },
   "repository": {
     "type": "git",
