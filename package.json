@@ -8,10 +8,10 @@
     "dist"
   ],
   "scripts": {
-    "clean-dist": "(rm -rf ./dist || true)",
+    "clean-dist": "(rimraf ./dist || true)",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "NODE_ENV=production npm run clean-dist && webpack",
-    "pre": "NODE_ENV=production npm run clean-dist && && webpack && npm version patch"
+    "build": "cross-env NODE_ENV=production npm run clean-dist && webpack",
+    "pre": "cross-env NODE_ENV=production npm run clean-dist && && webpack && npm version patch"
   },
   "repository": {
     "type": "git",
@@ -19,10 +19,12 @@
   },
   "devDependencies": {
     "@types/react": "^16.4.1",
+    "cross-env": "^5.2.0",
     "css-loader": "^0.28.11",
     "node-sass": "^4.9.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+    "rimraf": "^2.6.2",
     "sass-loader": "^7.0.3",
     "style-loader": "^0.21.0",
     "ts-loader": "^4.4.1",
