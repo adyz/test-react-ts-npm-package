@@ -53,6 +53,7 @@ function App() {
 - Add your changes
 - Make pull request
 - Enjoy
+- Test!
 
 
 
