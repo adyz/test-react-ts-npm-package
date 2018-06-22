@@ -1,3 +1,3 @@
 it('Passes test for buton', () => {
-  expect(true).toBe(true);
+  expect(true).toBe(false);
 });
