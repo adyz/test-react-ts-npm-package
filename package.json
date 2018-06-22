@@ -11,7 +11,7 @@
   "scripts": {
     "clean-temp": "(rimraf ./temp || true)",
     "clean-dist": "(rimraf ./dist || true)",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "auto-temp-files": "node automation-scripts/automate-components.js",
     "auto-types-copy": "node automation-scripts/automate-types-location.js",
     "auto-types-path": "node automation-scripts/automate-types-dist-location.js",
@@ -22,19 +22,40 @@
     "type": "git",
     "url": "https://github.com/adyz/test-react-ts-npm-package"
   },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "globals": {
+      "ts-jest": {
+        "tsConfigFile": "tsconfig.json"
+      }
+    },
+    "testMatch": [
+      "**/*.test.+(ts|tsx|js)"
+    ]
+  },
   "devDependencies": {
+    "@types/jest": "^23.1.1",
     "@types/react": "^16.4.1",
     "@types/react-dom": "^16.0.6",
     "awesome-typescript-loader": "^5.1.1",
     "cross-env": "^5.2.0",
     "css-loader": "^0.28.11",
     "fs-extra": "^6.0.1",
+    "jest": "^23.1.0",
     "node-sass": "^4.9.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "rimraf": "^2.6.2",
     "sass-loader": "^7.0.3",
     "style-loader": "^0.21.0",
+    "ts-jest": "^22.4.6",
     "ts-loader": "^4.4.1",
     "typescript": "^2.9.2",
     "webpack": "^4.12.0",
