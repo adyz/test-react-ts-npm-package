@@ -41,7 +41,11 @@ function allComponentsRead() {
 
 
     //Index file contents (file that imports all components and exports all as a single module)
-    let indexContents = `${Object.keys(webpackEntry).map((entry) => `import ${entry.capitalize()} from '.${webpackEntry[entry]}';\n`).join('')} \n export {${Object.keys(webpackEntry).map((entry) => `${entry.capitalize()}`)}}`
+    let indexContents = `
+    ${Object.keys(webpackEntry).map((entry) => 
+        `import ${entry.capitalize()} from '.${webpackEntry[entry]}';\n`).join('')} \n
+        export default ${Object.keys(webpackEntry)[0].capitalize()} \n
+        export {${Object.keys(webpackEntry).map((entry) => `${entry.capitalize()}`)}}`
 
 
     // Create a index file that bundles all toghether

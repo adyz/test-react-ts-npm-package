@@ -1,6 +1,6 @@
 {
   "name": "test-react-ts-npm-package",
-  "version": "1.0.6",
+  "version": "1.0.11",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "sideEffects": false,
@@ -14,7 +14,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "auto-temp-files": "node automation-scripts/automate-components.js",
     "auto-types-copy": "node automation-scripts/automate-types-location.js",
-    "build": "cross-env NODE_ENV=production npm run clean-dist && npm run auto-temp-files &&  webpack && npm run auto-types-copy &&  npm run clean-temp",
+    "auto-types-path": "node automation-scripts/automate-types-dist-location.js",
+    "build": "cross-env NODE_ENV=production npm run clean-dist && npm run auto-temp-files &&  webpack && npm run auto-types-copy && npm run auto-types-path && npm run clean-temp",
     "pre": "cross-env NODE_ENV=production npm run clean-dist && && webpack && npm version patch"
   },
   "repository": {
