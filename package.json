@@ -1,6 +1,6 @@
 {
   "name": "test-react-ts-npm-package",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "sideEffects": false,
@@ -41,8 +41,8 @@
     "webpack-cli": "^3.0.8"
   },
   "peerDependencies": {
-    "react": "^15.3.2 || ^16.4.1",
-    "react-dom": "^15.3.2 || ^16.4.1",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
     "@types/react": "^16.4.1",
     "@types/react-dom": "^16.0.6"
   }
