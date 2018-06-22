@@ -1,0 +1,4 @@
+lannguage: node_js
+node_js:
+- "stable"
+scripts: test
