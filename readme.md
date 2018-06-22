@@ -1,5 +1,5 @@
 # Boilerplate for react liraries
-Create your own react components with React and Typescript
+Create your own react components with React and Typescript.
 
 
 ## Install
