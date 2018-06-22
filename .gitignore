@@ -1,2 +1,4 @@
 dist
+temp
 node_modules
+.sonarlint

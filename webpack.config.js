@@ -1,10 +1,10 @@
 const path = require('path');
 const env = process.env.NODE_ENV ? process.env.NODE_ENV : 'development';
+const generatedEntries = require('./temp/webpackEntryFile');
+
 
 module.exports = {
-  entry: {
-		index: "./src/index",
-	},
+  entry: generatedEntries,
   mode: env,
   output: {
     filename: '[name].js',
@@ -19,7 +19,7 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/,
-        use: 'ts-loader',
+        use: 'awesome-typescript-loader',
         exclude: /node_modules/
       },
       {
