@@ -1,6 +1,8 @@
 # Boilerplate for React UI libraries
 Create your own react components with React and Typescript.
 
+[![Build Status](https://travis-ci.org/adyz/test-react-ts-npm-package.svg?branch=master)](https://travis-ci.org/adyz/test-react-ts-npm-package)
+
 
 ## Install
 Run `npm install test-react-ts-npm-package`
