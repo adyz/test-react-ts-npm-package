@@ -47,6 +47,13 @@ function App() {
 - Build the dist files
 
 
+# Contributing
+- Fork this repository
+- Create new branch
+- Add your changes
+- Make pull request
+- Enjoy
+
 
 
 
