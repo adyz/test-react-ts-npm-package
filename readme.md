@@ -1,4 +1,4 @@
-# Boilerplate for react liraries
+# Boilerplate for React UI libraries
 Create your own react components with React and Typescript.
 
 
