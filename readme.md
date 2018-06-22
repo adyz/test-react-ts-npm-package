@@ -19,6 +19,7 @@ function App() {
   );
 }
 ```
+[![Edit Usage of the test-react-ts-npm-package with simple react](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/64m89m9pj3)
 
 ## Import the full library
 ```js
