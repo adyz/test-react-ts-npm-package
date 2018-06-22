@@ -15,6 +15,7 @@ function App() {
   return (
     <div>
       <Banner name="John" />
+      <Button>Go</Button>
     </div>
   );
 }
@@ -30,8 +31,8 @@ import
 function App() {
   return (
     <div>
-      <Banner name="John" />
-      <Button>Go</Button>
+      <Banner name="Doe" />
+      <Button>Planet</Button>
     </div>
   );
 }
