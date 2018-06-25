@@ -1,4 +1,4 @@
-
+'use strict';
 /*
  * 1: Create a temporary file with the webpack.entry structure for all the components
  * 2: Create a temporary index file so that you can bundle all in a single index file that is also added to the webpack.entry

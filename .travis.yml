@@ -1,8 +1,17 @@
 language: node_js
-sudo: false
+cache:
+  directories:
+    - ~/.npm
+notifications:
+  email: false
 node_js:
-  - "stable"
+  - 'stable'
 install:
   - npm install
 script:
   - npm test
+after_success:
+  - npm run travis-deploy-once "npm run semantic-release"
+branches:
+  except:
+    - /^v\d+\.\d+\.\d+$/
