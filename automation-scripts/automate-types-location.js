@@ -4,6 +4,7 @@
  */
 const fs = require('fs-extra');
 
+'use strict';
 const fileWalker = require('./utils/fileWalker');
 
 const config = require('../config.js');
