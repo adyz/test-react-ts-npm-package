@@ -24,7 +24,7 @@ fileWalker("./" + config.build.distFolder, function (err, files) {
         fs.copy(fileName, './dist/' + fileNameFinalResult, { flag: 'w'}, err => {
             if (err) return console.error(err)
 
-            console.log(fileName, ' copied with success!', )
+            console.log(fileName, ' copied with success!')
         }) // copies file
     });
 });
