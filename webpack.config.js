@@ -1,6 +1,6 @@
-const path = require('path');
-const env = process.env.NODE_ENV ? process.env.NODE_ENV : 'development';
-const generatedEntries = require('./temp/webpackEntryFile');
+var path = require('path');
+var env = process.env.NODE_ENV ? process.env.NODE_ENV : 'development';
+var generatedEntries = require('./temp/webpackEntryFile');
 
 
 module.exports = {
