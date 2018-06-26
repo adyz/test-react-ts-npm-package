@@ -51,6 +51,7 @@ function App() {
 ## Using this project as contributor
 - Clone this project
 - Create a new branch along the lines of `feature/newcomponent`
+- Start the local development environment running `npm run storybook`
 - Add your changes
 - Add tests for your changes
 - Add the changes to git with `git add -A .`
