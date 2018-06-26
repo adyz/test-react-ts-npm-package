@@ -19,6 +19,7 @@
     "pre": "npm run build",
     "travis-deploy-once": "travis-deploy-once",
     "semantic-release": "npm run build && semantic-release",
+    "storybook": "start-storybook -p 9001 -c .storybook",
     "commit": "git-cz"
   },
   "repository": {
@@ -44,6 +45,9 @@
     ]
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^3.4.8",
+    "@storybook/addon-info": "^3.4.8",
+    "@storybook/react": "^4.0.0-alpha.10",
     "@types/jest": "^23.1.1",
     "@types/react": "^16.4.1",
     "@types/react-dom": "^16.0.6",
@@ -56,6 +60,7 @@
     "jest": "^23.1.0",
     "node-sass": "^4.9.0",
     "react": "^16.4.1",
+    "react-docgen-typescript-loader": "^2.1.1",
     "react-dom": "^16.4.1",
     "rimraf": "^2.6.2",
     "sass-loader": "^7.0.3",

@@ -15,7 +15,7 @@ export default class Banner extends React.Component<BannerProps, BannerState> {
     
     return (
       <div className="banner">
-          <h1>Hello {this.props.name}</h1>
+          <h1>Hello <span>{this.props.name}</span></h1>
       </div>
     );
   }
