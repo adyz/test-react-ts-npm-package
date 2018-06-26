@@ -1,3 +1,9 @@
 .banner {
     background: #ccc;
+    padding: 2rem;
+    h1 {
+        span {
+            color: red;
+        }
+    }
 }
