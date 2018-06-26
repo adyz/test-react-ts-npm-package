@@ -1,13 +1,15 @@
 # Boilerplate for React UI libraries
-Create your own react components with React and Typescript.
-
 [![Build Status](https://travis-ci.org/adyz/test-react-ts-npm-package.svg?branch=master)](https://travis-ci.org/adyz/test-react-ts-npm-package)
 
+This is a boilerplate that allows you to create your own react components with React and Typescript.
+Bellow you'll find a description on how to use this project from different points of view: User, Contributor and Creator.
 
-## Install
-Run `npm install test-react-ts-npm-package`
+## Using this project as a library
 
-## Import single components (smaller bundle size)
+### Install
+Run `npm install --save-dev test-react-ts-npm-package`
+
+### Import single components (smaller bundle size)
 ```js
 
 import Banner from "test-react-ts-npm-package/dist/banner";
@@ -24,7 +26,7 @@ function App() {
 ```
 [![Edit Usage of the test-react-ts-npm-package with simple react](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/64m89m9pj3)
 
-## Import the full library
+### Import the full library
 ```js
 
 import Banner, { Button } from "test-react-ts-npm-package";
@@ -41,21 +43,20 @@ function App() {
 ```
 
 
-# Development
+## Using this project as boilerplate
+- Clone this project
+- Modify the `package.json` file so that the new package name, version, etc fits your need.
+- Follow the steps from bellow
 
-- Clone this project, 
-- Add your components in the `src/components` folder
-- Run the tests
-- Build the dist files
-
-
-# Contributing
-- Fork this repository
-- Create new branch
+## Using this project as contributor
+- Clone this project
+- Create a new branch along the lines of `feature/newcomponent`
 - Add your changes
-- Make pull request
-- Enjoy
-- Test!
+- Add tests for your changes
+- Add the changes to git with `git add -A .`
+- Commit your change using "Angular Commit Message Conventions" ([Read more](https://gist.github.com/stephenparish/9941e89d80e2bc58a153)) using `npm run commit` and a wizard will guide you.
+- Push the changes to origin and create a pull request.
+
 
 
 
