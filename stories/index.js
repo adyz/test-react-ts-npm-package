@@ -4,6 +4,7 @@ import { withInfo } from "@storybook/addon-info";
 import { action } from '@storybook/addon-actions';
 import Button from '../src/components/Button/Button';
 import Banner from '../src/components/Banner/Banner'
+import Select from '../src/components/Select/Select'
 
 const ButtonStories = storiesOf("Button", module);
 
@@ -21,5 +22,14 @@ BannernStories.add(
   "Banner",
   withInfo({ inline: false })(() =>
     <Banner name="World" />
+  )
+)
+
+const SelectStories = storiesOf("Select", module);
+
+SelectStories.add(
+  "Select",
+  withInfo({ inline: false })(() =>
+    <Select />
   )
 )
