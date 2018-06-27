@@ -18,7 +18,7 @@
     "build": "cross-env NODE_ENV=production npm run clean-dist && npm run auto-temp-files &&  webpack && npm run auto-types-copy && npm run auto-types-path && npm run clean-temp",
     "pre": "npm run build",
     "travis-deploy-once": "travis-deploy-once",
-    "semantic-release": "npm run build && semantic-release && npm run deploy-storybook",
+    "semantic-release": "npm run build && semantic-release && npm run deploy-storybook -- --ci",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "deploy-storybook": "storybook-to-ghpages",
     "commit": "git-cz"
