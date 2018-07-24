@@ -6,11 +6,7 @@
  */
 
 const fs = require('fs-extra');
-const path = require('path');
 const config = require('../config.js');
-String.prototype.capitalize = function() {
-    return this.charAt(0).toUpperCase() + this.slice(1);
-}
 
 const componentsFolder = './' + config.build.componentsFolder + '/';
 const tempFolder = './' + config.build.tempFolder;
@@ -29,7 +25,13 @@ function allComponentsRead() {
     }
 
     // Webpack entry contents (an object with all the components)
-    let webpackEntryWithIndex = Object.assign({index: tempFolder + '/index'}, webpackEntry);
+    let webpackFilesWithJustPath = {}
+    
+    Object.keys(webpackEntry).forEach((entry) => {
+        webpackFilesWithJustPath[webpackEntry[entry].fileName] = webpackEntry[entry].fileLocation;
+    })
+
+    let webpackEntryWithIndex = Object.assign({index: tempFolder + '/index'}, webpackFilesWithJustPath);
     let webpackEntryFileContents = 'module.exports = ' +  JSON.stringify(webpackEntryWithIndex);
 
 
@@ -39,17 +41,15 @@ function allComponentsRead() {
         console.log(tempWebackEntryFileName + ' saved!');
     });
 
-
-    //Index file contents (file that imports all components and exports all as a single module)
     let indexContents = `
     ${Object.keys(webpackEntry).map((entry) => 
-        `import ${entry.capitalize()} from '.${webpackEntry[entry]}';\n`).join('')} \n
-        export default ${Object.keys(webpackEntry)[0].capitalize()} \n
-        export {${Object.keys(webpackEntry).map((entry) => `${entry.capitalize()}`)}}`
+        `import ${webpackEntry[entry].fileName} from '.${webpackEntry[entry].fileLocation}';\n`).join('')} \n
+        export default ${webpackEntry[Object.keys(webpackEntry)[0]].fileName};\n
+        export {${Object.keys(webpackEntry).map((entry) => `${webpackEntry[entry].fileName}`)}};`
 
 
     // Create a index file that bundles all toghether
-    fs.writeFile(tempFolder + '/' + tempIndexFileName, indexContents, { flag: 'w' }, (err) => {  
+    fs.writeFile(tempFolder + '/' + tempIndexFileName, indexContents, { flag: 'w' }, (err) => {
         if (err) throw err;
         console.log(tempIndexFileName + ' file saved!');
     });
@@ -67,13 +67,17 @@ fs.readdir(componentsFolder, (err, folders) => {
         const fileLocation = componentsFolder + folderName + '/' + folderName;
 
         // Add the components in the modulesObject
-        webpackEntry[fileName.toLocaleLowerCase()] = fileLocation;
+        webpackEntry[fileName.toLocaleLowerCase()] = {
+            fileLocation,
+            fileName
+        };
 
         // All the components read, write the temporary file (1)
         if(folders.length === i) {
             allComponentsRead();    
         }
-        
+
+        // Usefull for the callback
         i++;
     });
   })
