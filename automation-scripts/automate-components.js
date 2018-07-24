@@ -73,17 +73,8 @@ fs.readdir(componentsFolder, (err, folders) => {
         if(folders.length === i) {
             allComponentsRead();    
         }
-
-        // Usefull for the callback
+        
         i++;
-
-
-        //const fileDestination = './dist/' + file.toLocaleLowerCase() + '.test.tsx';
-
-        // fs.copy(fileName, fileDestination, err => {
-        //     if (err) return console.error(err)
-        //     console.log('success!')
-        // })
     });
   })
 
