@@ -4,10 +4,10 @@ import './_button.scss'
 
 export default class Button extends React.Component {
   public render() {
-    
+    const {children, ...rest} = this.props;
     return (
-      <button className="button">
-          {this.props.children}
+      <button {...rest} className="button">
+          {children}
       </button>
     );
   }

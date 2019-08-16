@@ -1,35 +1,33 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+
+// Addons
 import { withInfo } from "@storybook/addon-info";
 import { action } from '@storybook/addon-actions';
+
+
+// Components 
 import Button from '../src/components/Button/Button';
 import Banner from '../src/components/Banner/Banner'
 import Select from '../src/components/Select/Select'
 
-const ButtonStories = storiesOf("Button", module);
+const ButtonStories = storiesOf("Button", module).addDecorator(withInfo);
 
 ButtonStories.add(
   "Button",
-  withInfo({ inline: false })(() =>
-    <Button onClick={action('clicked')}>Test Button</Button>
-  )
+  () => <Button onClick={() => {action()('clicked');}}>Test Button</Button>
 )
 
+const BannerStories = storiesOf("Banner", module).addDecorator(withInfo);;
 
-const BannernStories = storiesOf("Banner", module);
-
-BannernStories.add(
+BannerStories.add(
   "Banner",
-  withInfo({ inline: false })(() =>
-    <Banner name="World" />
-  )
+  () => <Banner name="World" />
 )
 
-const SelectStories = storiesOf("Select", module);
+const SelectStories = storiesOf("Select", module).addDecorator(withInfo);
 
 SelectStories.add(
   "Select",
-  withInfo({ inline: false })(() =>
-    <Select />
-  )
+  () => <Select />
 )
